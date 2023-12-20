@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poduto</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <h1>Produtos</h1>
+</body>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Marca</th>
+            <th>Referência</th>
+            <th>Unidade de Medida</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                <td><a href="{% url 'index' %}">{{ produto.nome }}</a></td>
+                <td>{{ produto.marca }}</td>
+                <td>{{ produto.referencia }}</td>
+                <td>{{ produto.unidade_medida }}</td>
+            </th>
+        </tr>
+    </tbody>
+</table>
+</html>
